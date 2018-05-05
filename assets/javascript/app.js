@@ -243,7 +243,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
         //otherwise, if the wrong answer is chosen
         else if (answers[randomIndex][randomAnswer1] != correctAnswer){
@@ -269,7 +269,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
        
     });
@@ -301,7 +301,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
         //otherwise, if the wrong answer is chosen
         else if (answers[randomIndex][randomAnswer2] != correctAnswer){
@@ -327,7 +327,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
     });
 
@@ -356,7 +356,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
         //otherwise, if the wrong answer is chosen
         else if (answers[randomIndex][randomAnswer3] != correctAnswer){
@@ -382,7 +382,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
     });
 
@@ -413,7 +413,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
         //otherwise, if the wrong answer is chosen
         else if (answers[randomIndex][randomAnswer4] != correctAnswer){
@@ -439,7 +439,7 @@ $(document).ready(function(){
             clearInterval(gameClock);
             clearTimeout(gameTimer);
             //start timer for correct/incorrect screen
-            resetTimer = setTimeout("timeUpB()", 1000);
+            resetTimer = setTimeout("timeUpB()", 5000);
         }
     });
     //create/store function that is called if the question isn't answered in time
@@ -477,7 +477,7 @@ $(document).ready(function(){
         clearInterval(gameClock);
         clearTimeout(gameTimer);
         //start timer for correct/incorrect screen
-        resetTimer = setTimeout("timeUpB()", 1000);    
+        resetTimer = setTimeout("timeUpB()", 5000);    
     };
     //create/store function that is called when the timer for the answer result
     //(correct/incorrect/timeout) screen runs out (check for win, reset game)
@@ -557,7 +557,7 @@ $(document).ready(function(){
                 $("#gamePhoto").attr("src", whoAmI[randomIndex]);
                     };
             //set number of seconds for new quesiton
-            timeLeft = 5;
+            timeLeft = 15;
             //display amount of time left
             $("#timerBox").html("you have " + timeLeft + " seconds remaining");
             //every second, subtract a second from timeLeft and display the remaining time
@@ -572,7 +572,7 @@ $(document).ready(function(){
                 }
             }, 1000);
             //start the time's up timer
-            gameTimer = setTimeout("timeUpA()", 5000);
+            gameTimer = setTimeout("timeUpA()", 15000);
          }   
     };
     

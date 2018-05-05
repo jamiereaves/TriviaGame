@@ -49,9 +49,10 @@ within element. set default font size in container. set border color/style/etc..
     border-radius: 16px;
     border-style: double;
     border-width: 2px;
-    border-color: #7a7678;
+    border-color: rgb(78, 197, 236);
     margin: 0 auto 40px auto;
-    background: rgba(24, 5, 100, 0.9)
+    background: rgba(24, 5, 100, 0.9);
+    box-shadow: 1px 1px 4px 4px #07021f;
 }
 #containerB::after {
     content: "";
@@ -70,8 +71,9 @@ header{
     border-radius: 8px;
     border-style: double;
     border-width: 2px;
-    border-color: #7a7678;
+    border-color: #07021f;
     margin: auto;
+    box-shadow: 1px 1px 4px 4px #180564;
 
 }
 /*set background/font color. space with padding. set font style/size. set border and round corners. center text
@@ -88,7 +90,14 @@ set margins to space/center*/
     background: rgb(78, 197, 236);
     margin:0 auto 10px auto;
     font-family: "Bungee Shade", cursive;
-
+    box-shadow: 1px 1px 4px 4px #07021f;
+}
+/*raise shadow on hover, lower shadow on active*/
+#startGame:hover {
+    box-shadow: 2px 2px 6px 6px #07021f;
+}
+#startGame:active {
+    box-shadow: 1px 1px 4px 4px #07021f;
 }
 /*set background/font color. space with padding. set font style. set border and round corners. center text
 set margins to space/center*/
@@ -115,6 +124,7 @@ set margins to space/center. set width to 60% of container. set height to 5% of 
     padding: 5px 0 15px 0;
     width: 60%;
     height: 5%;
+    box-shadow: 1px 1px 3px 3px #07021f;
 }
 /*set background/font color. set font style. center text. set margins to space/center. set height to 20% parent container*/
 #statBox {
@@ -156,6 +166,21 @@ round corners and set borderset height to 20% parent container*/
     text-align: center;
     background-color: lightblue;
     margin: 5px 200px;
+    outline: none;
+    box-shadow: 1px 1px 2px 2px #07021f;
+}
+/*raise shadow on hover, lower shadow on active*/
+#answerButton1:hover,
+#answerButton2:hover,
+#answerButton3:hover,
+#answerButton4:hover {
+    box-shadow: 1px 2px 4px 4px #07021f;
+}
+#answerButton1:active,
+#answerButton2:active,
+#answerButton3:active,
+#answerButton4:active {
+    box-shadow: 1px 1px 2px 2px #07021f;
 }
 #answerButton1::after,
 #answerButton2::after,
@@ -173,6 +198,7 @@ to enable the child images to be placed within element. auto margins to center*/
     min-height: 300px;
     position: relative;
     margin: auto;
+    box-shadow: 1px 1px 2px 2px #07021f;
 }
 /*tvFrame is as wide as parent container and as tall as possible. overflow is visible outside parent container. position
 absolutely at appropriate position. set z index higher than gamephoto, so it acts like an image frame.*/
@@ -197,4 +223,114 @@ small amount of offset from tv frame. set z index below tvFrame so it appears th
     top: 5%;
     left: 5%;
     z-index: 1;
+}
+/*css for screen widths smaller than 514px. adjusted container widths
+and font sizes to ensure the page displays correctly at v small browser widths*/
+@media only screen and (max-width: 538px) {
+header {
+    width: 100%;
+    max-width: 280px;
+    font-size: 28px;
+}
+#startGame {
+    font-size: 24px;
+}
+#timerBox {
+    font-size: 24px;
+    width: 80%;
+}
+#dialogBox{
+    font-size: 18px;
+}
+#photoBox{
+    width:100%;
+    min-height: 250px;
+}
+#gamePhoto{
+    width:70%;
+    max-height:225px;
+}
+#answerButton1,
+#answerButton2,
+#answerButton3,
+#answerButton4 {
+    font-size:14px;
+    min-width:55%;
+    margin: 5px 0px;
+}
+#statBox {
+    font-size:18px;
+}
+
+}
+/*css for screen widths between 515px and 768px. adjusted container widths
+and font sizes to ensure the page displays correctly at med browser widths*/
+@media only screen and (min-width:539px) and (max-width:768px) {
+header {
+    width: 80%;
+    font-size: 38px;
+    max-width: 410px;
+}
+#startGame {
+    font-size: 36px;
+}
+#timerBox {
+    font-size: 32px;
+    width: 70%;
+}
+#dialogBox{
+    font-size: 22px;
+}
+#photoBox{
+    width:80%;
+}
+#gamePhoto{
+    width:70%;
+}
+#answerButton1,
+#answerButton2,
+#answerButton3,
+#answerButton4 {
+    font-size:18px;
+    min-width:55%;
+    margin: 5px 0px;
+}
+#statBox {
+    font-size:22px;
+}
+}
+/*css for screen widths between 769px and 1100px. adjusted collection font
+size so the rows display correctly.*/
+@media only screen and (min-width:769px) and (max-width:1100px) {
+    header {
+        min-width:500px;
+    }
+    #startGame {
+        font-size: 38px;
+    }
+    #timerBox {
+        font-size: 38px;
+        width: 90%;
+    }
+    
+    #photoBox{
+        width:60%;
+        min-width: 490px;
+    }
+    #gamePhoto{
+        width:70%;
+    }
+    }
+/*css for large screen widths*/
+@media only screen and (min-width:1101px) {
+body {
+    background-size: 120% 1300px;
+}
+header {
+    max-width:600px;
+}
+#photoBox {
+    max-width:600px;
+}
+
 }
