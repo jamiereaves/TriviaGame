@@ -483,7 +483,7 @@ $(document).ready(function(){
     //(correct/incorrect/timeout) screen runs out (check for win, reset game)
     timeUpB = function(){
         //check if the max # of questions has been answered
-        if (attempts == 5){
+        if (attempts == 10){
             //if it has and a musical clue is playing, pause that music
             if (music[randomIndex] != 0){
                 music[randomIndex].pause();
