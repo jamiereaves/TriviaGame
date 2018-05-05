@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--set the viewport so the page displays across devices correctly-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--links to style, *****googlefont*****, and reset css files-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Inline|Bungee+Shade|Faster+One|Gugi|Press+Start+2P" rel="stylesheet">
+    <!--link to jquery via cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--link to javascript file-->
+    <script src="assets/javascript/app.js"></script>
+    <!--page title-->
+    <title>Homework #4</title>
+</head>
+
+<body>
+        <!--container for all game content-->
+        <div id=mainContainer>
+            <!--sub-container to hold the game title-->
+            <div id=containerA>
+                <!--container for game title-->
+                <header>TRIVIANIMATION!</header>
+            </div> 
+            <!--subcontainer for gameplay elements-->
+            <div id=containerB>
+                <!--button to begin gameplay-->
+                <button id=startGame>CLICK TO BEGIN!</button>
+                <!--container for timer-->
+                <div id=timerBox></div>
+                <!--container for questions, messages, endgame instructions-->
+                <div id=dialogBox></div>
+                <!--container for question related image-->
+                <div id=photoBox>
+                    <img id=tvFrame src="assets/images/tvscreen.gif">
+                    <img id=gamePhoto src="assets/images/playagain.gif">
+                </div>
+                <!--container for answer buttons-->
+                <div id=answerBox>
+                    <button id=answerButton1></button>
+                    <button id=answerButton2></button>
+                    <button id=answerButton3></button>
+                    <button id=answerButton4></button>
+                </div>
+                <!--container for game stats-->
+                <div id=statBox></div>
+            </div> 
+        </div>
+
+</body>
+</html>

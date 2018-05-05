@@ -1,0 +1,200 @@
+/*set background image that fills browser window*/
+body {
+    background-image: url("../images/background1.gif");
+    background-repeat: no-repeat;
+    background-size: 110% 1100px;
+    position: relative;
+}
+/*set display so main content aligns vertically, set width to 80% of the body
+set height to auto. auto margins to space. center text. set position to relative so 
+child elements may be placed absolutely*/
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    min-height: 80%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+#mainContainer::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*set width & height of header container. set margins to space appropriately*/
+#containerA{
+    width:100%;
+    height:10%;
+    /*display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+    margin: 20px auto;
+    
+}
+/*set width & height of gameplay container set minwidth to 70% of mainContainer. set margins to space appropriately 
+set position to relative so child elements may be placed absolutely. set background/font color. set padding to space
+within element. set default font size in container. set border color/style/etc.. make the background 90% opaque*/
+#containerB{
+    width:100%;
+    height: auto;
+    min-height:70%;
+    position: relative;
+    background: #180564;
+    color: lightblue;
+    padding: 30px 10px;
+    font-size: 28px;
+    border-radius: 16px;
+    border-style: double;
+    border-width: 2px;
+    border-color: #7a7678;
+    margin: 0 auto 40px auto;
+    background: rgba(24, 5, 100, 0.9)
+}
+#containerB::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*header is 60% as wide as container. set background static gif. set font color/style/size. set border and round corners.
+set margins to center*/
+header{
+    width:60%;
+    background-image: url("../images/background.gif");
+    color: #07021f;
+    font-family: "Gugi", cursive;
+    padding: 10px;
+    font-size: 56px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 2px;
+    border-color: #7a7678;
+    margin: auto;
+
+}
+/*set background/font color. space with padding. set font style/size. set border and round corners. center text
+set margins to space/center*/
+#startGame {
+    color: #180564;
+    padding: 5px;
+    font-size: 42px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 2px;
+    border-color: #7a7678;
+    text-align: center;
+    background: rgb(78, 197, 236);
+    margin:0 auto 10px auto;
+    font-family: "Bungee Shade", cursive;
+
+}
+/*set background/font color. space with padding. set font style. set border and round corners. center text
+set margins to space/center*/
+#dialogBox {
+    color:  rgb(78, 197, 236);
+    font-family: "Bungee Inline", cursive;
+    text-align: center;
+    margin: 10 px auto;
+    padding: 20px 0;
+}
+/*set background/font color. space with padding. set font style. set border and round corners. center text
+set margins to space/center. set width to 60% of container. set height to 5% of container*/
+#timerBox {
+    background:  rgb(78, 197, 236);
+    color: #180564;
+    font-size: 40px;
+    font-family: "Bungee Shade", cursive;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 2px;
+    border-color: #7a7678;
+    text-align: center;
+    margin: 10px auto;
+    padding: 5px 0 15px 0;
+    width: 60%;
+    height: 5%;
+}
+/*set background/font color. set font style. center text. set margins to space/center. set height to 20% parent container*/
+#statBox {
+    color: rgb(78, 197, 236);
+    font-family: "Bungee Shade", cursive;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    height: 20%;
+}
+/*set display so buttons display verticaly and space appropriately. space/center with margins. set height to 35% of containerB*/
+#answerBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    height: 35%;
+}
+#answerBox::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*set background/font color. set font style. center text. set margins and padding to space/center. set min-width to 20%.
+round corners and set borderset height to 20% parent container*/
+#answerButton1,
+#answerButton2,
+#answerButton3,
+#answerButton4 {
+    min-width: 25%;
+    height: 20%;
+    color: #180564;
+    font-family: "Gugi", cursive;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 8px;
+    border-style: double;
+    border-width: 2px;
+    border-color: #7a7678;
+    text-align: center;
+    background-color: lightblue;
+    margin: 5px 200px;
+}
+#answerButton1::after,
+#answerButton2::after,
+#answerButton3::after,
+#answerButton4::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*set photo container width to 50% of containerB. set min-height to 300px to prevent distortion. set position to relative
+to enable the child images to be placed within element. auto margins to center*/
+#photoBox {
+    width: 50%;
+    min-height: 300px;
+    position: relative;
+    margin: auto;
+}
+/*tvFrame is as wide as parent container and as tall as possible. overflow is visible outside parent container. position
+absolutely at appropriate position. set z index higher than gamephoto, so it acts like an image frame.*/
+#tvFrame {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+}
+/*gamePhoto is 3/4 as wide as parent container (is supposed to display like it's the content of the tv frame's screen, so it 
+must be smaller than the tv frame). set a max height so it doesn't overflow frame (and hide overflow). position to account for
+small amount of offset from tv frame. set z index below tvFrame so it appears the tvFrame is above it.*/
+#gamePhoto {
+    width:75%;
+    max-height: 250px;
+    height: 100%;
+    overflow: hidden;
+    position:absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+}
